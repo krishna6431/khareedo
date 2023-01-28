@@ -11,6 +11,7 @@ import ErrorPage from "./pages/ErrorPage/ErrorPage";
 
 import { GlobalStyle } from "./styles/GlobalStyle"
 import { ThemeProvider } from "styled-components";
+import Header from "./components/Header";
 
 
 const App = () => {
@@ -43,6 +44,7 @@ const App = () => {
     <ThemeProvider theme={theme}>
       <BrowserRouter>
         <GlobalStyle />
+        <Header />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -53,7 +55,7 @@ const App = () => {
           <Route path="*" element={<ErrorPage />} />
         </Routes>
       </BrowserRouter >
-    </ThemeProvider>
+    </ThemeProvider >
   )
 };
 
